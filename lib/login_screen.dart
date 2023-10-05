@@ -5,7 +5,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Iniciar Sesión'),
+        title: Text('Inici0 de Sesion'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -25,14 +25,22 @@ class LoginScreen extends StatelessWidget {
               onPressed: () {
                 // inicio de sesión
               },
+              style: ElevatedButton.styleFrom(
+                primary: const Color.fromARGB(255, 109, 8, 0),
+              ),
               child: Text('Iniciar Sesión'),
             ),
             SizedBox(height: 8.0),
             TextButton(
               onPressed: () {
-                // contraseña recupera
+                // contraseña recuperada
               },
-              child: Text('¿Olvidaste tu contra?'),
+              child: Text(
+                '¿Olvidaste tu contraseña?',
+                style: TextStyle(
+                  color: Colors.purple,
+                ),
+              ),
             ),
             SizedBox(height: 8.0),
             Row(
@@ -42,16 +50,22 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () {
                     // autenticación con Facebook
                   },
-                  icon: Icon(Icons.facebook),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.red,
+                  ),
                   label: Text('Inicio con Facebook'),
+                  icon: Icon(Icons.facebook),
                 ),
                 SizedBox(width: 8.0),
                 ElevatedButton.icon(
                   onPressed: () {
                     // autenticación con Gmail
                   },
-                  icon: Icon(Icons.mail),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.red,
+                  ),
                   label: Text('Inicio con Gmail'),
+                  icon: Icon(Icons.mail),
                 ),
               ],
             ),
